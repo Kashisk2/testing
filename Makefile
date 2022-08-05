@@ -10,6 +10,10 @@ target/debug/$(NAME):
 target/release/$(NAME):
 	cargo build --release
 
+.PHONY: docker
+docker:
+	docker build -t $(NAME) --build-arg APP_NAME=$(NAME) .
+
 .PHONY: build
 build: clean target/debug/$(NAME)
 
