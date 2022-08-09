@@ -8,7 +8,7 @@ WORKDIR /usr/src/${APP_NAME}
 # Download and cache deps.
 COPY Cargo.toml Cargo.lock ./
 RUN mkdir ./src && touch ./src/lib.rs
-RUN cargo build --release
+RUN cargo build
 RUN rm -f ./src/lib.rs 
 
 COPY src ./src

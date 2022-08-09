@@ -1,4 +1,4 @@
-# WUW (Whats Ur Wallet)
+# WUW (Whats Ur Wallet) [![CI](https://github.com/euforia/wuw/actions/workflows/main.yml/badge.svg)](https://github.com/euforia/wuw/actions/workflows/main.yml)
 
 WUW is a service that attempts to identify the blockchain associated to a given wallet address.  This
 service returns an SVG of the blockchain logo for the input wallet address. 
