@@ -36,5 +36,5 @@ jobs:
 
       - name: Publish
         run: |
-          docker tag wuw ghcr.io/${{github.actor}}/wuw
-          docker push ghcr.io/${{github.actor}}/wuw
+          docker tag wuw ghcr.io/${{github.actor}}/wuw:${{github.ref_name}}
+          docker push ghcr.io/${{github.actor}}/wuw:${{github.ref_name}}
