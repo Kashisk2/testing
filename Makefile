@@ -12,7 +12,7 @@ target/release/$(NAME):
 
 .PHONY: docker
 docker:
-	docker build -t $(NAME)
+	docker build -t $(NAME) .
 
 .PHONY: build
 build: clean target/debug/$(NAME)
