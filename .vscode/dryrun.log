@@ -1,6 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/abs/Documents/pacenthink/wuw'
-rm -f target/debug/wuw
-rm -f target/release/wuw
-make: Leaving directory `/Users/abs/Documents/pacenthink/wuw'
- 
