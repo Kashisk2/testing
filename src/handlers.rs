@@ -19,6 +19,13 @@ pub struct SupportedParams {
     size: Option<usize>,
 }
 
+pub async fn healthcheck(
+    _req: HttpRequest,
+    _params: web::Query<SupportedParams>,
+) -> Result<HttpResponse, Error> {
+    Ok(HttpResponse::Ok().finish())
+}
+
 pub async fn get_pubkey_chain(
     req: HttpRequest,
     params: web::Query<SupportedParams>,

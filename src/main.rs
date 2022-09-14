@@ -36,6 +36,7 @@ async fn main() -> std::io::Result<()> {
         App::new()
             .wrap(cors)
             .route("/{bs58_pubkey}", web::get().to(handlers::get_pubkey_chain))
+            .route("/", web::get().to(handlers::healthcheck))
             .wrap(Logger::default())
     })
     .bind((opt.bind_addr, opt.port))?
