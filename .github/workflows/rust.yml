@@ -36,3 +36,8 @@ jobs:
         run: |
           docker tag wuw ghcr.io/${{github.actor}}/wuw:${{github.ref_name}}
           docker push ghcr.io/${{github.actor}}/wuw:${{github.ref_name}}
+
+      - name: Deploy
+        if: github.ref_name == 'main'
+        run: |
+          curl -v https://api.pacenthink.co/deploy -H 'Content-Type: application/json' -d '{"Image": "ghcr.io/${{github.actor}}/wuw:${{github.ref_name}}", "Ports":[9876]}'
